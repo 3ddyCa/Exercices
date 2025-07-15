@@ -1,0 +1,64 @@
+.container
+{
+    display:grid;
+    grid-template-rows: 10% 10% 500px 10%;
+    grid-template-columns: 25% 50% 25%;
+    justify-items:center;
+    position:relative;
+}
+
+.container h1
+{
+    grid-row:1;
+    grid-column:2;
+
+}
+
+.container ul
+{
+
+    display:grid;
+    grid-template-columns:repeat(5,20%);
+    justify-items:center;  
+}
+
+.container nav
+{
+        grid-row:2;
+    grid-column:2;
+
+}
+
+.container ul li
+{
+    margin:1em;
+    position:relative;
+    left:10%;
+    word-break: keep-all;
+    width:6em;
+}
+
+.Art_L
+{
+    grid-row:3;
+    grid-column:1;
+    overflow:auto;
+}
+.Art_M
+{
+    grid-row:3;
+    grid-column:2;
+    overflow:auto;
+}
+.Art_R
+{
+    grid-row:3;
+    grid-column:3;
+    overflow:auto;
+}
+
+footer
+{
+    grid-row:4;
+    grid-column:2;
+}
