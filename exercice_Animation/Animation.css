@@ -1,0 +1,158 @@
+
+.Damier
+{
+    margin: 0;
+    padding: 0;
+    width:1150px;
+    min-width: 1150px;
+
+}
+
+    ul
+    {
+        width: fit-content;
+        height:fit-content;
+        list-style: none;
+        overflow: hidden;
+        background-color:tomato;
+        margin:0;
+        padding:0;
+       margin-bottom:3em;
+
+    }
+    li:not(#bas)
+    {
+        width: 90px;
+        height: 80px;
+        margin:1px;
+        background-image:linear-gradient(to bottom, grey, white, white);
+        float: left;
+        text-align: center;
+        line-height: 80px;
+        border: 1px solid white;
+        border-radius:3em 3em 0 0;
+        transition-property:border-radius;
+   }
+  #bas li
+   {
+       width: 90px;
+       height: 80px;
+       background-image:linear-gradient(to top, grey, white, white);
+       float: left;
+       text-align: center;
+       line-height: 80px;
+       border: 1px solid white;
+       border-radius: 0 0 3em 3em;
+       transition-property:border-radius;
+   }
+
+    li:hover
+    {
+        transition-duration:400ms;
+        border-radius:3em;
+        animation: border_bounce 3s ease-in-out;
+        animation-iteration-count:infinite;
+        animation-direction:alternate;
+        background-color:gold;
+
+    }
+
+
+
+
+.carousel
+{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    transition-property:skew;
+}
+
+.pic_container
+{
+    box-shadow:1em,1em,1em;
+
+}
+
+.pic_container:hover
+{
+    transition-duration:300ms;
+    animation:animationNavBar 2500ms ease-out;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+
+
+}
+
+
+@keyframes border_bounce{
+
+    0%{
+        transform: scale(1.1);
+        transform: skewY(-2deg);
+        transform:rotate(5deg);
+    }
+    17%{
+        transform: scale(1.15);
+        transform: skewY(-6.5deg);
+    }
+    32%{
+        transform: scale(1.22);
+        transform: skewY(-4.3deg);
+        transform:rotate(-12deg);
+    }
+    45%{
+        transform: scale(1.40);
+        transform: skewY(1deg);
+    }
+    80%{
+        transform: scale(1.24);
+        transform: skewY(5deg);
+        transform:rotate(15deg);
+    }
+    90%{
+        transform: scale(1.18);
+        transform: skewY(7deg);
+    }
+    100%{
+        transform: scale(1.12);
+        transform: skewY(3deg);
+        transform:rotate(21deg);
+    }
+}
+
+
+@keyframes animationNavBar{
+
+    0%{
+        transform: translateY(-10em);
+        transform: skewY(-2deg);
+
+    }
+    17%{
+        transform: translateY(-26em);
+        transform: skewY(-5.5deg);
+    }
+    32%{
+        transform: translateY(-28em);
+        transform: skewY(-9.3deg);
+    }
+    45%{
+        transform: translateY(-50em);
+        transform: skewY(-13.8deg);
+    }
+    80%{
+        transform: translateY(-58em);
+        transform: skewY(-18deg);
+    }
+    90%{
+        transform: translateY(-75em);
+        transform: skewY(-24deg);
+    }
+    100%{
+        transform: translateY(-100em);
+        transform: skewY(-30deg);
+    }
+}
+
